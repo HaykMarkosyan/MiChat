@@ -1,0 +1,13 @@
+<%- include("partials/header.ejs") -%>
+
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <p class="card-text">We need your email for your security and to make sure that it is really you. And we will send verification code.</p><br />
+        <form action="/register/<%=username%>" method="POST">
+            <input type="email" class="form-control" name="email" placeholder="your email" required><br />
+            <button class="btn btn-primary" type="submit">Send</button>
+        </form>
+    </div>
+</div>
+
+<%- include("partials/footer.ejs") -%>

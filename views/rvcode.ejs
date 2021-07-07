@@ -1,0 +1,12 @@
+<%- include("partials/header.ejs") -%>
+
+<div class="card">
+  <div class="card-body">
+    <form action="/register/verify/:<%=username%>" method="POST">
+        <input type="number" class="form-control" name="vconde" required>
+        <button type="submit">Sign Up</button>
+    </form>
+  </div>
+</div>
+
+<%- include("partials/footer.ejs") -%>

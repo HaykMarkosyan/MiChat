@@ -1,0 +1,22 @@
+<%- include("partials/header.ejs") -%>
+<div id="login-card" class="card">
+    <div class="card-body">
+        <h5 class="card-title">Log in</h5><br />
+        <% if(!eoru){ %>
+            <div class="card border-danger mb-3" style="max-width: 25rem;">
+                <div class="card-body text-danger">
+                    <p class="card-text">email/username or password is incorrect.</p>
+                </div>
+            </div>
+        <% } %>
+
+        <form action="/login" method="POST">
+            <input type="text" class="form-control" name="username" placeholder="email or username"><br />
+            <input type="password" class="form-control" name="password" placeholder="password"><br />
+            <button type="submit" class="btn btn-primary btn-none">Log in</button>&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <a href="/register">Don't have account?</a>
+        </form>
+    </div>
+</div>
+<%- include("partials/footer.ejs") -%>
